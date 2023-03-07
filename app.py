@@ -10,8 +10,8 @@ app = Flask(__name__)
 
 # Possible way to connect to the spm postgres database
 
-# conn = psycopg2.connect(host="http://spm-prod-db.cxcqep6lvzyx.eu-west-1.rds.amazonaws.com/"
-#                         , user="postgres", password="postgres", dbname="spm-prod-db", port=5432)
+# conn = psycopg2.connect(host=""
+#                         , user="postgres", password="", dbname="", port=)
 
 ## Generate DQ Report by loading data and calling ProfileReport
 def generate_report(min):
