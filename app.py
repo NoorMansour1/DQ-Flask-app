@@ -8,7 +8,7 @@ matplotlib.use('Agg')
 from flask import Flask, redirect, render_template, request, url_for
 app = Flask(__name__)
 
-# Possible way to connect to the spm postgres database
+# Possible way to connect to a postgres database
 
 # conn = psycopg2.connect(host=""
 #                         , user="postgres", password="", dbname="", port=)
@@ -19,7 +19,7 @@ def generate_report(min):
     # df = pd.DataFrame(np.random.rand(100, 6), columns=["a", "b", "c", "d", "e", "f"])
 
     # Data saved as pickle file and loaded in as pandas dataframe
-    df = pd.read_pickle('aseas_data.pick').convert_dtypes(convert_integer=False)
+    df = pd.read_pickle('data.pick').convert_dtypes(convert_integer=False)
 
     # Instantiate the report class
     profile_max = ProfileReport(df,
